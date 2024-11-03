@@ -1,7 +1,12 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from './logo.svg'; // declarative style
+import './App.css'; //declarative style
 
 export const App = () => {
+	//start imperative style....
+	function getYear() {
+		return String(new Date().getFullYear());
+	}
+	const year = getYear();
 	return (
 		<div className="App">
 			<header className="App-header">
@@ -17,7 +22,10 @@ export const App = () => {
 				>
 					Learn React
 				</a>
+				<p>
+					<span id="year"> {year} </span>
+				</p>
 			</header>
 		</div>
 	);
-};
+}; //finish imperative style...
